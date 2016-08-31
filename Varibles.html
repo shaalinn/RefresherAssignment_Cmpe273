@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>variable</title>
+    <script>
+        function circle() {
+            var radius = document.getElementById("radius");
+            var r = parseInt(radius.value);
+
+            var ac = 3.14*r*r;
+            var areaC = document.getElementById("areaC");
+            areaC.innerHTML = "area of the circle is "+ac;
+        }
+
+        function cube() {
+            var height = document.getElementById("height");
+            var width = document.getElementById("width");
+            var length = document.getElementById("length");
+            var h = parseInt(height.value);
+            var w = parseInt(width.value);
+            var l = parseInt(length.value);
+            var area = 2*(h*w + w*l + h*l);
+            var areaCu = document.getElementById("areaCu");
+            areaCu.innerHTML = "area of the cube is "+area;
+
+        }
+    </script>
+</head>
+<body>
+
+    <p id="areaC"></p>
+    <input type="text" id="radius" placeholder="enter the radius of the circle">
+    <button onclick="circle()">find area of circle</button>
+    <br>
+    <p id="areaCu"></p>
+    <input type="text" id="height" placeholder="enter height of the cube">
+    <input type="text" id="width" placeholder="enter width of the cube">
+    <input type="text" id="length" placeholder="enter length of the cube">
+    <button onclick="cube()">find area of cube</button>
+</body>
+
+</html>

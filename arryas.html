@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrays</title>
+
+</head>
+<body>
+<input type="text" placeholder="enter name" id="name">
+<button onclick="sort1()">add name</button>
+<p id="list"></p>
+</body>
+<script>
+    var arrays = ["a"];
+    var list = document.getElementById("list");
+    function sort1() {
+        var arr = document.getElementById("name");
+        arrays.push(arr.value)
+        arrays.sort();
+        list.innerHTML = arrays;
+    }
+</script>
+</html>

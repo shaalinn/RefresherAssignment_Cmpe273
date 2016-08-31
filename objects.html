@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objects</title>
+    <script>
+        function makeObject() {
+            var fn = document.getElementById("fn");
+            var ln = document.getElementById("ln");
+            var person={ firstName: fn.value ,lastName: ln.value, showName: function () {
+                return this.firstName+" "+this.lastName;
+            } };
+            var person1= document.getElementById("person");
+            person1.innerHTML = "{ firstName: "+person.firstName+" ,lastName: "+person.lastName+" ,showName: function (){ return this.firsName+\" \"+this.lastName}};";
+        }
+    </script>
+</head>
+<body>
+<p id="person"></p>
+<input type="text" placeholder="First Name" id="fn">
+<input type="text" placeholder="Last Name" id="ln">
+<button onclick="makeObject()">Make Object</button>
+</body>
+</html>

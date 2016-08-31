@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <script>
+        function enterJSON() {
+            var fn = document.getElementById("fn");
+            var ln = document.getElementById("ln");
+            var age = document.getElementById("age");
+            var json = '{ "person" : [ ' +
+                    '{ "firstName" : "'+fn.value+'", '+' "lastName" : "'+ln.value+'", '+' "age" : "'+age.value+'"}'+
+                    ']}';
+            console.log(json);
+            document.getElementById("gj").innerHTML=json;
+        }
+
+        function parseJSON() {
+
+            var text = document.getElementById("ej");
+            var result = document.getElementById("result");
+            result.innerHTML = "";
+            var obj = JSON.parse(text.innerHTML);
+            for(var i=0;i<obj.person.length;i++){
+                result.innerHTML += "First Name: "+obj.person[i].firstName + " Last Name: " + obj.person[i].lastName+"<br> ";
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" placeholder="first name" id="fn">
+<input type="text" placeholder="last name" id="ln">
+<input type="text" placeholder="age" id="age">
+<button onclick="enterJSON()">generate JSON</button>
+<p id="gj">
+</p>
+<h1>Example JSON PARSING</h1>
+<p id="ej">{ "person" : [
+    { "firstName":"abc" , "lastName":"ABC" },
+    { "firstName":"pqr" , "lastName":"PQR" },
+    { "firstName":"xyz" , "lastName":"XYZ" }]}</p>
+<button onclick="parseJSON()">parse JSON</button>
+<p id="result"></p>
+
+</body>
+</html>

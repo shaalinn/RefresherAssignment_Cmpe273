@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>events</title>
+    <script>
+        function loaded() {
+            var f = document.getElementById("f");
+            f.style.visibility="visible";
+        }
+        function over() {
+            document.getElementById("s").style.visibility="visible";
+            document.getElementById("t").style.visibility="hidden";
+        }
+        function out() {
+            document.getElementById("s").style.visibility="hidden";
+            document.getElementById("t").style.visibility="visible";
+        }
+        function clicked() {
+            document.getElementById("s").style.visibility="visible";
+            document.getElementById("t").style.visibility="visible";
+        }
+    </script>
+</head>
+<body onload="loaded()">
+<button onclick="clicked()" onmouseover="over()" onmouseout="out()">events</button>
+<br>
+<img id="f" src="https://pbs.twimg.com/profile_images/666608748862046209/3GObPHdF.png" alt="web page loaded" height="300px" width="300px" style="visibility:hidden"><br>
+<img id="s" src="http://waucondastore.com/wp-content/uploads/2012/05/Approaches-of-J.S.-Petofi-and-K.-Brinker-to-the-Study-of-the-Text.png" alt="mouse over" height="300px" width="300px" style="visibility:hidden"><br>
+<img id="t" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png" alt="mouse out" height="300px" width="300px" style="visibility:hidden"><br>
+</body>
+
+</html>

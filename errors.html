@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Errors</title>
+</head>
+<body>
+<input type="text" id="number" placeholder="enter any number">
+<button onclick="prime()">Prime?</button>
+<p id="result"></p>
+<script>
+    var n = document.getElementById("number");
+
+    function prime() {
+        var num = parseInt(n.value);
+        try{
+            for(var i=2;i<num;i++){
+                if(num%i==0){
+                    throw "not prime";
+                }
+            }
+            throw "prime";
+        }
+        catch (err){
+            var res = document.getElementById("result");
+            res.innerHTML = "number is "+err;
+        }
+        finally {
+            document.getElementById("number").value = "";
+        }
+    }
+</script>
+</body>
+</html>

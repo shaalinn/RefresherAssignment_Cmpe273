@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conditions</title>
+
+    <script>
+        function max() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            if(isNaN(a) || isNaN(b) || isNaN(c)){
+            document.getElementById("max").innerHTML = "input is not number";
+            }
+            else if (a>b){
+                if(a>c){
+                    document.getElementById("max").innerHTML ="maximum number is "+ a;
+                }
+            }
+            else if(b>c){
+                document.getElementById("max").innerHTML ="maximum number is "+ b;
+            }
+            else{
+                document.getElementById("max").innerHTML ="maximum number is "+ c;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+<p id="max"></p>
+<input type="text" placeholder="enter first number" id="a">
+<input type="text" placeholder="enter second number" id="b">
+<input type="text" placeholder="enter third number" id="c">
+<button onclick="max()">Find maximum</button>
+</body>
+</html>

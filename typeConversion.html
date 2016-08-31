@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type conversion</title>
+</head>
+<body>
+<p id="result">
+
+</p>
+<script>
+    var d = new Date();
+    document.getElementById("result").innerHTML = "String(123) - number to string conversion "+ String(123) +"<br>"+
+                    "String(true) - boolean to string conversion "+ String(true)+"<br>"+
+                    "String(date()) - date object to string conversion "+ String(Date())+"<br>"+
+                    "Number(\"27\") - String to number conversion " + Number("27")+"<br>"+
+                    "Number(false) - boolean to number conversion "+Number(false)+"<br>" +
+                    "Number(Date()) - date to number conversion "+ Number(d)+"<br>"+
+                    "5+null - automatic type conversion "+ 5 + null + "<br>";
+</script>
+</body>
+</html>
