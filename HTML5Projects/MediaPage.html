@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Page</title>
+    <script>
+        function changeVideo() {
+            var v = document.getElementById("v");
+            if(v.src=="video1.mp4"){
+                v.src='video2.mp4';
+                v.load();
+            }
+            else {
+                v.src='video1.mp4';
+                v.load();
+            }
+
+        }
+        function changeAudio() {
+            var a = document.getElementById("a");
+            if(a.src=="audio1.mp3"){
+                a.src='audio2.mp3';
+                a.load();
+            }
+            else {
+                a.src='audio1.mp3';
+                a.load();
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1>Videos</h1>
+<button onclick="changeVideo()" >Alternative Video</button>
+<video id="v" width="320" height="240" src="video1.mp4" controls></video>
+<br>
+<h1>Audio</h1>
+<button onclick="changeAudio()" >Alternative Audio</button>
+<audio id="a" src="audio1.mp3" controls></audio>
+</body>
+</html>
